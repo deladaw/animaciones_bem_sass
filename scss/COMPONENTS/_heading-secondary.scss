@@ -1,0 +1,13 @@
+.heading-secondary {
+  font-size: $tamanyoh2;
+}
+
+.heading-secondary--gradient {
+  background: -webkit-linear-gradient(
+    -180deg,
+    rgb(0, 116, 81),
+    rgb(154, 203, 8)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

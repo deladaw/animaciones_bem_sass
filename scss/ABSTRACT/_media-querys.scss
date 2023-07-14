@@ -1,0 +1,33 @@
+@media (max-width: 800px) {
+  .stories {
+    font-size: 14px;
+    .col-3-4 {
+      width: 100%;
+    }
+    //He tenido que poner varios !important porque no me cogía los estilos.
+    .burger {
+      display: none !important;
+    }
+
+    &__box {
+      padding: 3.5rem !important;
+    }
+  }
+  .card {
+    padding: 2.2em !important;
+    &__photo {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+  }
+}

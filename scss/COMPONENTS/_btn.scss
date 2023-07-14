@@ -1,0 +1,52 @@
+//Componente botón
+.btn {
+  &:visited,
+  &:link {
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $colorFondoBlanco;
+    color: $colorFuenteCuerpo;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 3rem;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+  }
+  &:active {
+    @include btnActive(1.5px);
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $colorFondoBlanco;
+    z-index: -1;
+    border-radius: 100px;
+    transition: all 0.4s;
+  }
+  &:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+}
+
+//VARIACIÓN ANIMADA DEL BOTÓN
+.btn--animated {
+  animation: moveToTop 0.5s ease-in-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
+//VARIACIÓN DEL BOTÓN COLOR BLANCO
+.btn--white {
+  background-color: $colorFondoBlanco;
+}

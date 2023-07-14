@@ -1,0 +1,13 @@
+//Este mixin es para que tenga la animación de pulsar el botón en otros botones,
+//puedes elegir los px que se va a mover al pulsarlo, si no se pone nada, por defecto
+//Es de 1 pixel.
+@mixin btnActive($Y: 1px) {
+  transform: translateY($Y);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+//Este mixin hace una sombrita por todo el objeto. Puedes elegir la intensidad de la sombra, por defecto es 0.1
+@mixin softBoxShadow($intensidad: 0.1) {
+  box-shadow: 0px 0px 24px 4px rgba(0, 0, 0, $intensidad);
+}

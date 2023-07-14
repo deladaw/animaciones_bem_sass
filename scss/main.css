@@ -1,0 +1,431 @@
+@media (max-width: 800px) {
+  .stories {
+    font-size: 14px;
+  }
+  .stories .col-3-4 {
+    width: 100%;
+  }
+  .stories .burger {
+    display: none !important;
+  }
+  .stories__box {
+    padding: 3.5rem !important;
+  }
+  .card {
+    padding: 2.2em !important;
+  }
+  .card__photo {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 700px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active {
+  outline: none;
+}
+
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 1rem;
+}
+
+@-webkit-keyframes moveToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes moveToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes moveToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  margin-bottom: 2rem;
+}
+.heading-primary--main {
+  display: block;
+  font-size: 3.8rem;
+  letter-spacing: 1.7rem;
+  -webkit-animation-name: moveToLeft;
+          animation-name: moveToLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+.heading-primary--sub {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.8rem;
+  -webkit-animation: moveToRight 1s ease;
+          animation: moveToRight 1s ease;
+}
+
+.heading-secondary {
+  font-size: 3rem;
+}
+
+.heading-secondary--gradient {
+  background: -webkit-linear-gradient(-180deg, rgb(0, 116, 81), rgb(154, 203, 8));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading-tertiary {
+  font-weight: 400;
+  font-size: 1.7rem;
+  margin: 10px 0px;
+}
+
+.btn:visited, .btn:link {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #777;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 3rem;
+  transition: all 0.2s;
+  position: relative;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+.btn:active {
+  transform: translateY(1.5px);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: -1;
+  border-radius: 100px;
+  transition: all 0.4s;
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn--animated {
+  -webkit-animation: moveToTop 0.5s ease-in-out 0.75s;
+          animation: moveToTop 0.5s ease-in-out 0.75s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+.btn--white {
+  background-color: #fff;
+}
+
+.burger {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 2.6rem;
+  border-radius: 50%;
+  margin-left: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 24px 4px rgba(0, 0, 0, 0.15);
+}
+
+.header__logo {
+  float: left;
+  padding: 1.5rem 2rem;
+}
+.header__logo-img {
+  width: 6rem;
+}
+
+.grid-test {
+  width: 100%;
+  background-color: #dbdbdb;
+  padding: 180px 0px;
+  margin-top: -200px;
+}
+.grid-test .grid__row {
+  background-color: #eee;
+}
+.grid-test .col {
+  background-color: aqua;
+}
+
+.grid__row {
+  width: 100%;
+  max-width: 114rem;
+  margin: 8rem auto;
+  display: flex;
+}
+
+.col {
+  margin: 0 auto;
+}
+.col-1-2 {
+  width: calc((100% - 6rem) / 2);
+}
+.col-1-3 {
+  width: calc((100% - 12rem) / 3);
+}
+.col-1-4 {
+  width: calc((100% - 18rem) / 4);
+}
+.col-2-3 {
+  width: calc((100% - 6rem) / 3 * 2);
+}
+.col-2-4 {
+  width: calc((100% - 12rem) / 4 * 2);
+}
+.col-3-4 {
+  width: calc((100% - 6rem) / 4 * 3);
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(252, 255, 83, 0.8117647059), rgba(24, 153, 125, 0.6235294118)), url(../img/andrea-reiman-287012.jpg);
+  background-size: cover;
+  background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+}
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.feature {
+  background-image: linear-gradient(to right bottom, rgba(211, 213, 111, 0.8117647059), rgba(40, 180, 133, 0.6235294118)), url(../img/mountain_bg.jpg);
+  background-size: cover;
+  transform: skew(0deg, -5deg);
+  padding: 5.5rem 0rem;
+  z-index: 10;
+  margin-top: -100px;
+}
+.feature-feactures {
+  color: #777;
+  display: flex;
+  text-align: center;
+  transform: skew(0deg, 5deg);
+}
+.feature-feactures .grid__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.feature-box {
+  background-color: rgba(240, 240, 240, 0.82);
+  padding: 20px;
+  transition: 0.5s;
+  border-radius: 3px;
+  min-width: 220px;
+  margin-bottom: 2.5rem;
+}
+.feature-box-icon {
+  font-size: 4.5rem;
+  color: #28b485;
+  transition: 0.5s;
+}
+.feature-box:hover {
+  transform: scale(1.1) translateY(-20px);
+}
+.feature-p {
+  font-weight: 300;
+}
+
+.stories {
+  color: inherit;
+  position: relative;
+  padding-top: 180px;
+  margin-top: -100px;
+}
+.stories .burger-box {
+  display: flex;
+  justify-content: space-between;
+}
+.stories__video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  opacity: 15%;
+}
+.stories__box {
+  position: relative;
+  padding: 4em;
+}
+.stories .col-3-4 {
+  background-color: rgba(255, 255, 255, 0.6431372549);
+  transform: skew(-10deg);
+  border-radius: 3px;
+}
+.stories .heading-secondary {
+  text-align: center;
+  margin-left: auto;
+}
+
+.card {
+  font-size: "lato", sans-serif;
+  width: 100%;
+  padding: 5em;
+  transform: skew(10deg);
+}
+.card__photo {
+  width: 15rem;
+  height: 15rem;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  float: left;
+  margin-right: 3em;
+  position: relative;
+}
+.card__photo .blur {
+  background-size: cover;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  transition: all 0.4s ease-out;
+}
+.card__photo .blur.p1 {
+  background-image: url("../img/girl_boat_stories.png");
+}
+.card__photo .blur.p2 {
+  background-image: url("../img/man_traveling_stories.png");
+  background-position: 60%;
+}
+.card__photo:hover .card__name {
+  opacity: 100;
+  z-index: 5;
+}
+.card__photo:hover .p1 {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+.card__photo:hover .p2 {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+.card__name {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0;
+  z-index: 6;
+  position: absolute;
+  transition: all 0.4s ease-out;
+}
+.card .heading-fourth {
+  margin-bottom: 10px;
+}/*# sourceMappingURL=main.css.map */

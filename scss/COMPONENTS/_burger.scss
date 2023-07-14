@@ -1,0 +1,9 @@
+.burger {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 2.6rem;
+  border-radius: 50%;
+  margin-left: auto;
+  background-color: $colorFondoBlanco;
+  @include softBoxShadow(0.15);
+}

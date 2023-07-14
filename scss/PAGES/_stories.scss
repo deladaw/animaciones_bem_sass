@@ -1,0 +1,101 @@
+.stories {
+  color: inherit;
+  position: relative;
+  padding-top: 180px;
+  margin-top: -100px;
+
+  .burger-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    opacity: 15%;
+  }
+
+  &__box {
+    position: relative;
+    padding: 4em;
+  }
+
+  .col-3-4 {
+    background-color: #ffffffa4;
+    transform: skew(-10deg);
+    border-radius: $rounded;
+  }
+
+  .heading-secondary {
+    text-align: center;
+    margin-left: auto;
+  }
+}
+
+.card {
+  font-size: $fuenteCuerpo;
+  width: 100%;
+  padding: 5em;
+  transform: skew(10deg);
+
+  &__photo {
+    width: 15rem;
+    height: 15rem;
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    float: left;
+    margin-right: 3em;
+    position: relative;
+
+    .blur {
+      background-size: cover;
+      width: inherit;
+      height: inherit;
+      position: absolute;
+      transition: all 0.4s ease-out;
+
+      &.p1 {
+        background-image: url("../img/girl_boat_stories.png");
+      }
+      &.p2 {
+        background-image: url("../img/man_traveling_stories.png");
+        background-position: 60%;
+      }
+    }
+    &:hover .card__name {
+      opacity: 100;
+      z-index: 5;
+    }
+
+    &:hover .p1 {
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+    }
+    &:hover .p2 {
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+    }
+  }
+  &__name {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    z-index: 6;
+    position: absolute;
+    transition: all 0.4s ease-out;
+  }
+
+  .heading-fourth {
+    margin-bottom: 10px;
+  }
+}

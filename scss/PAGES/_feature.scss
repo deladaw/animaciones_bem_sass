@@ -1,0 +1,46 @@
+.feature {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(211, 213, 111, 0.8117647059),
+      rgba(40, 180, 133, 0.6235294118)
+    ),
+    url(../img/mountain_bg.jpg);
+  background-size: cover;
+  transform: skew(0deg, -5deg);
+  padding: 5.5rem 0rem;
+  z-index: 10;
+  margin-top: -100px;
+
+  &-feactures {
+    color: $colorFuenteCuerpo;
+    display: flex;
+    text-align: center;
+    transform: skew(-0deg, 5deg);
+
+    .grid__row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &-box {
+    background-color: rgba(240, 240, 240, 0.82);
+    padding: 20px;
+    transition: 0.5s;
+    border-radius: $rounded;
+    min-width: 220px;
+    margin-bottom: 2.5rem;
+
+    &-icon {
+      font-size: $iconSizeM;
+      color: $colorVerde;
+      transition: 0.5s;
+    }
+    &:hover {
+      transform: scale(1.1) translateY(-20px);
+    }
+  }
+
+  &-p {
+    font-weight: 300;
+  }
+}
